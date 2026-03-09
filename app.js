@@ -60,7 +60,7 @@ async function initializeDashboard() {
 
 
 /* -------------------------
-RENDER ISSUE CARDS
+RENDER ISSUE CARDS and
 Creates cards inside the grid
 -------------------------*/
 function renderGrid(issues) {
