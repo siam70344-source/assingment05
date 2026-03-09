@@ -170,7 +170,7 @@ function renderGrid(issues) {
 
 
 /* -------------------------
-SEARCH ISSUES
+SEARCH ISSUES and
 Uses API search endpoint
 -------------------------*/
 async function executeSearch() {
