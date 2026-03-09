@@ -1,0 +1,127 @@
+/* Page background */
+.page-bg{
+background:#F3F4F6;
+min-height:100vh;
+font-family:sans-serif;
+}
+
+/* center layout */
+.center-box{
+display:flex;
+align-items:center;
+justify-content:center;
+min-height:100vh;
+padding:16px;
+}
+
+/* card style */
+.card{
+background:white;
+padding:32px;
+border-radius:12px;
+border:1px solid #e5e7eb;
+box-shadow:0 1px 3px rgba(0,0,0,0.06);
+width:100%;
+max-width:420px;
+text-align:center;
+}
+
+/* titles */
+.main-title{
+font-size:24px;
+font-weight:700;
+color:#1f2937;
+}
+
+.sub-text{
+color:#6b7280;
+font-size:14px;
+margin-bottom:24px;
+}
+
+/* input label */
+.input-label{
+font-weight:500;
+}
+
+/* helper text */
+.helper{
+font-size:12px;
+color:#3b82f6;
+}
+
+/* main button */
+.primary-btn{
+background:#4F16FF;
+color:white;
+border:none;
+width:100%;
+margin-top:16px;
+}
+
+/* navbar */
+.navbar-main{
+background:white;
+border-bottom:1px solid #e5e7eb;
+padding:12px 24px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+/* main container */
+.container-main{
+max-width:1200px;
+margin:auto;
+padding:24px;
+}
+
+/* filter buttons */
+.filter-active{
+background:#4F16FF;
+color:white;
+border:none;
+padding:0 24px;
+}
+
+.filter-btn{
+background:white;
+border:1px solid #e5e7eb;
+color:#4b5563;
+padding:0 24px;
+}
+
+/* issue header */
+.issue-header{
+background:white;
+border:1px solid #e5e7eb;
+border-radius:8px 8px 0 0;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+/* grid */
+.issue-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:16px;
+padding:24px;
+background:#F9FAFB;
+}
+
+/* loader */
+.loader-box{
+display:flex;
+justify-content:center;
+padding:80px 0;
+}
+
+/* modal button */
+.modal-btn{
+background:#4F16FF;
+color:white;
+border:none;
+padding:0 32px;
+}

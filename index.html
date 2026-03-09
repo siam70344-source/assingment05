@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GitHub Issues Tracker</title>
+
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+
+<body class="page-bg">
+
+
+<!-- LOGIN -->
+
+<div id="auth-screen" class="center-box">
+
+<div class="card">
+
+<i class="fab fa-github text-6xl mb-4"></i>
+
+<h1 class="main-title">GitHub Issues Tracker</h1>
+
+<p class="sub-text">Sign in to manage your issues</p>
+
+
+<div class="space-y-4 text-left">
+
+<div class="form-control">
+
+<label class="label">
+<span class="input-label">Username</span>
+</label>
+
+<input id="user-field"
+type="text"
+placeholder="Enter username"
+class="input input-bordered w-full">
+
+<span class="helper">Default: admin</span>
+
+</div>
+
+
+<div class="form-control">
+
+<label class="label">
+<span class="input-label">Password</span>
+</label>
+
+<input id="pass-field"
+type="password"
+placeholder="Enter password"
+class="input input-bordered w-full">
+
+<span class="helper">Default: admin123</span>
+
+</div>
+
+
+<button onclick="attemptLogin()"
+class="btn primary-btn">
+
+Sign In
+
+</button>
+
+</div>
+
+
+<div class="divider text-xs text-gray-400">OR</div>
+
+<div class="bg-gray-50 p-4 rounded-lg text-sm italic">
+
+<p class="font-bold">Demo Credentials</p>
+
+<p>admin / admin123</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- DASHBOARD -->
+
+<div id="dashboard-screen" class="hidden">
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar-main">
+
+<div class="flex items-center gap-2">
+
+<i class="fab fa-github text-2xl"></i>
+
+<span class="font-bold text-lg">
+GitHub Issues Tracker
+</span>
+
+</div>
+
+
+<div class="relative">
+
+<input id="search-box"
+type="text"
+placeholder="Search issues..."
+class="input input-sm input-bordered w-56 pr-10">
+
+<button onclick="executeSearch()"
+class="absolute right-2 top-1 text-gray-400">
+
+<i class="fas fa-search"></i>
+
+</button>
+
+</div>
+
+</nav>
+
+
+
+<!-- MAIN -->
+
+<main class="container-main">
+
+
+<!-- FILTER -->
+
+<div class="flex gap-2 mb-6">
+
+<button onclick="updateFilter('all',this)"
+class="tab-btn btn btn-sm filter-active">
+
+All
+
+</button>
+
+
+<button onclick="updateFilter('open',this)"
+class="tab-btn btn btn-sm filter-btn">
+
+Open
+
+</button>
+
+
+<button onclick="updateFilter('closed',this)"
+class="tab-btn btn btn-sm filter-btn">
+
+Closed
+
+</button>
+
+</div>
+
+
+
+<!-- ISSUE HEADER -->
+
+<div class="issue-header">
+
+<div>
+
+<h2 class="font-bold text-gray-800">
+
+<span id="count-display">0</span> Issues
+
+</h2>
+
+<p class="text-xs text-gray-400">
+Track and manage project issues
+</p>
+
+</div>
+
+
+<div class="flex gap-4 text-xs">
+
+<span class="flex items-center gap-1">
+
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+
+Open
+
+</span>
+
+<span class="flex items-center gap-1">
+
+<span class="w-2 h-2 rounded-full bg-purple-500"></span>
+
+Closed
+
+</span>
+
+</div>
+
+</div>
+
+
+
+<!-- LOADER -->
+
+<div id="loader" class="loader-box hidden">
+
+<span class="loading loading-spinner loading-lg text-primary"></span>
+
+</div>
+
+
+
+<!-- GRID -->
+
+<div class="bg-white rounded-xl border overflow-hidden">
+
+<div id="issues-grid" class="issue-grid"></div>
+
+</div>
+
+
+</main>
+
+
+
+<!-- MODAL -->
+
+<dialog id="issue-detail-modal" class="modal">
+
+<div class="modal-box max-w-2xl p-0 overflow-hidden rounded-xl">
+
+<div id="modal-content"></div>
+
+<div class="p-6 bg-gray-50 flex justify-end">
+
+<form method="dialog">
+
+<button class="btn modal-btn">
+Close
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</dialog>
+
+
+
+<script src="app.js"></script>
+
+</body>
+<script src="app.js"></script>
+
+</html>
