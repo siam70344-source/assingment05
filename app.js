@@ -74,7 +74,7 @@ function renderGrid(issues) {
 
     issues.forEach(issue => {
 
-        // choose color depending on status
+        // choose color and  status
         const borderStyle =
             issue.status === "open"
                 ? "border-[#22c55e]"
