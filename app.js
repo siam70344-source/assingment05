@@ -31,7 +31,7 @@ function attemptLogin() {
 
 
 /* -------------------------
-LOAD ALL ISSUES
+LOAD ALL ISSUES and
 Runs after login
 -------------------------*/
 async function initializeDashboard() {
