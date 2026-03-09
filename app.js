@@ -240,7 +240,7 @@ function updateFilter(type, btn) {
 
 
 /* -------------------------
-OPEN ISSUE DETAILS
+OPEN ISSUE DETAILS and
 Loads single issue
 -------------------------*/
 async function openIssueDetails(id) {
