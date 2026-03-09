@@ -208,7 +208,7 @@ async function executeSearch() {
 
 
 /* -------------------------
-FILTER BUTTONS
+FILTER BUTTONS or
 Show open / closed / all
 -------------------------*/
 function updateFilter(type, btn) {
